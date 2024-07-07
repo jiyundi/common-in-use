@@ -12,11 +12,12 @@ Please note the codes in this repository are usually from others' work or in the
 * Unzipping --- `tar -xvzf file_to_be_unzipped.tar.gz`
 
 ## `Python` Format and Print
-| **Python 3**                 | Appearance                           |
-|:---------------------------- |:------------------------------------ |
-| `"{:5.2f}".format(d=1.23)`   | `_1.23` (5 digits, 2-decimal float)  |
-| `"{:5.2f}".format(d=-1.23)`  | `-1.23` (5 digits, 2-decimal float)  |
-| `"{:4d}".format(d=42)`       | `__42`  (two spaces at front)        |
+| **Python 3**                 | Appearance                   |
+|:---------------------------- |:---------------------------- |
+| `"{:5.2f}".format(-1.230)`   | `-1.23` (5 digits)           |
+| `"{:5.2f}".format(1.2300)`   | `_1.23` (1 space at front)   |
+| `"{:4d}".format(42)`         | `__42`  (2 spaces at front)  |
+| `"{:04d}".format(42)`        | `0042`                       |
 
 ## `Python` Read CSV tables
 [Go to `readcsv8.py`](./readcsv8.py) Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
