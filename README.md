@@ -38,3 +38,26 @@ Please note the codes in this repository are usually from others' work or in the
 ## `IDL` Specpro
 [Go to `specpro.pro`](./specpro.pro)
 
+## `ffmpeg` Conversion
+### Video AVI --> MOV
+```
+ffmpeg -i "D:\Pr_Project_Materials\PR50\*.avi" -c:v qtrle -pix_fmt argb "D:\Pr_Project_Materials\PR50\output_animation.mov"
+```
+### Chrome WPNG --> PNG
+```
+Get-ChildItem "*.webp" | ForEach-Object {
+$outputFile = $_.DirectoryName + "\" + [System.IO.Path]::GetFileNameWithoutExtension($_.Name) + ".png" 
+ffmpeg -i $_.FullName $outputFile
+}
+```
+
+## Video's 日本語 transcribe
+```
+pip install openai-whisper
+```
+```
+whisper your_video.mp4 --language Japanese --task transcribe
+```
+Note: Whisper 使用的预训练模型由 OpenAI 提供，有多种尺寸（如 Tiny|39 MB、Base、Small、Medium、Large|1.51G），模型越大，精度越高，但占用的存储空间也更大。默认情况下，如果你没有指定模型，Whisper 会下载 Large 模型（1.51G），可以指定一个更小的模型来减少下载时间和存储占用。如果你需要释放空间，可以删除：`del C:\Users\14477\.cache\whisper\model-large.pt`
+
+
