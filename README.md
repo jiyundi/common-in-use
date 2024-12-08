@@ -43,7 +43,7 @@ Please note the codes in this repository are usually from others' work or in the
 ```
 ffmpeg -i "D:\Pr_Project_Materials\PR50\*.avi" -c:v qtrle -pix_fmt argb "D:\Pr_Project_Materials\PR50\output_animation.mov"
 ```
-### Chrome WPNG --> PNG
+### Chrome WEBP --> PNG
 ```
 Get-ChildItem "*.webp" | ForEach-Object {
 $outputFile = $_.DirectoryName + "\" + [System.IO.Path]::GetFileNameWithoutExtension($_.Name) + ".png" 
