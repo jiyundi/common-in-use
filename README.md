@@ -20,23 +20,24 @@ Please note the codes in this repository are usually from others' work or in the
 | `"{:04d}".format(42)`        | `0042`                       |
 
 ## `Python` Read CSV tables
-[Go to `readcsv8.py`](./readcsv8.py) Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
+Go to [`readcsv8.py`](./readcsv8.py) Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
 
 ## `Python` Plot
-[Go to `plot.py`](./plot.py)
+Go to [`plot.py`](./plot.py)
 
 ## `Astropy` FITS header
-* See header in console --- [Go to `print_header.py`](./print_header.py)
-* Save header as TXT file --- [Go to `save_header_to_txt.py`](./save_header_to_txt.py)
+* See header in console --- Go to [`print_header.py`](./print_header.py)
+* Save header as TXT file --- Go to [`save_header_to_txt.py`](./save_header_to_txt.py)
 
 ## `Astropy` Read 1D spectrum
-[Go to `read_spec1d.py`](./read_spec1d.py)
+Go to [`read_spec1d.py`](./read_spec1d.py)
 
 ## `Astropy` Cosmological Calculations
-* $d_A$ $({\rm kpc}/{''})$ --- [Go to `scale_calc.py`](./scale_calc.py) Separation in transverse/projected proper kpc per arcsec at redshift $z$. 
+* $d_A$ $({\rm kpc}/{''})$ --- Go to [`scale_calc.py`](./scale_calc.py) Separation in transverse/projected proper kpc per arcsec at redshift $z$. 
 
 ## `IDL` Specpro
-[Go to `specpro.pro`](./specpro.pro)
+Go to [`specpro.pro`](./specpro.pro)
+Go to [`specpro_modified.pro`](./specpro_modified.pro) (Changes: L#2335-2337 --> 2335-2343; L#4053 --> 4060-4067)
 
 ## `ffmpeg` Conversion
 ### Video AVI --> MOV
