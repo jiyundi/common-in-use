@@ -7,9 +7,11 @@ Thus, I created this repository to let me quickly direct to my used codes (Pytho
 Please note the codes in this repository are usually from others' work or in the public domain. Use caution if you'd like to refer to these.
 
 ## Commonly-used `Linux` Commands
-### `tar`: Zip & Unzip
-* Zipping --- `tar -cvzf new_file_name.tar.gz folder/`
-* Unzipping --- `tar -xvzf file_to_be_unzipped.tar.gz`
+* `rm -r`: Delete non-empty directory
+* `tar`: Zipping --- `tar -cvzf new_file_name.tar.gz folder/`
+* `tar`: Unzipping --- `tar -xvzf file_to_be_unzipped.tar.gz`
+* `touch`: Make a new txt file
+* `ps`:  Process monitor
 
 ## `Python` Format and Print
 | **Python 3**                 | Appearance                   |
