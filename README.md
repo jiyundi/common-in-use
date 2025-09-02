@@ -11,7 +11,18 @@ Please note the codes in this repository are usually from others' work or in the
 * `tar`: Zipping --- `tar -cvzf new_file_name.tar.gz folder/`
 * `tar`: Unzipping --- `tar -xvzf file_to_be_unzipped.tar.gz`
 * `touch`: Make a new txt file
+* `nano`: Edit a text file. `Cmd`+`X` to finish and save as.
 * `ps`:  Process monitor
+* `ps`:  Process monitor in monitor
+* `printf '%03d\n' 4`: print `004`
+* `for` loop:
+  ```
+  for i in {0..4}; do printf '%0004d ' $i; done`: print `0000 0001 0002 0003
+  ```
+* `for` loop to rename files:
+  ```
+  for i in {1..100}; do mv "$i.txt" "$(printf '%03d' $i).txt"; done
+  ```
 
 ## `Python` Format and Print
 | **Python 3**                 | Appearance                   |
@@ -22,7 +33,7 @@ Please note the codes in this repository are usually from others' work or in the
 | `"{:04d}".format(42)`        | `0042`                       |
 
 ## `Python` Read CSV tables
-Go to [`readcsv8.py`](./readcsv8.py) Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
+Go to [`readcsv8.py`](./readcsv8.py). Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
 
 ## `Python` Plot
 Go to [`plot.py`](./plot.py)
