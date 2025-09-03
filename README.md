@@ -14,6 +14,7 @@ Please note the codes in this repository are usually from others' work or in the
 * `nano`: Edit a text file. `Cmd`+`X` to finish and save as.
 * `ps`:  Process monitor
 * `ps`:  Process monitor in monitor
+* `echo`: Print. E.g., `echo "Today is $(date)"`
 * `printf '%03d\n' 4`: print `004`
 * `for` loop:
   ```
