@@ -6,6 +6,23 @@ Thus, I created this repository to let me quickly direct to my used codes (Pytho
 
 Please note the codes in this repository are usually from others' work or in the public domain. Use caution if you'd like to refer to these.
 
+## Commonly-used `git` Commands (ASTR513一套小连招)
+Check and generate SSH key
+```
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "jiyundi@gmail.com"
+cat ~/.ssh/id_ed25519.pub (and copy to GitHub > Profile > Settings > SSH and GPG keys > New SSH key)
+ssh -T git@github.com
+```
+Git pull & push
+```
+git clone git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git
+git add .
+git commit -m "Major updates"
+git pull git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git main
+git push origin main
+```
+
 ## Commonly-used `Linux` Commands
 * `rm -r`: Delete non-empty directory
 * `tar`: Zipping --- `tar -cvzf new_file_name.tar.gz folder/`
