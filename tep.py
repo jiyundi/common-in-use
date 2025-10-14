@@ -1,7 +1,9 @@
 import pandas as pd
 
+obs_manual_adjust = 13 # avg. observed an offset to real payments
+
 # ===== 1. 读取 CSV 文件 =====
-file_path = "202509-10.csv"
+file_path = "202505-06.csv"
 df = pd.read_csv(file_path, skiprows=2)
 df = df[['DATE', 'START TIME', 'USAGE']]
 df['datetime'] = pd.to_datetime(df['DATE'] + ' ' + df['START TIME'], 
@@ -100,10 +102,10 @@ def demand_tou_charge(df, single_phase=True):
 
 # ===== 5. 汇总结果 =====
 costs = {
-    "Basic": basic_charge(total_kwh),
-    "TOU": tou_charge(df),
-    "Peak Demand": peak_demand_charge(df),
-    "Demand TOU": demand_tou_charge(df)
+    "Basic":       basic_charge(total_kwh) + obs_manual_adjust,
+    "TOU":         tou_charge(df)          + obs_manual_adjust,
+    "Peak Demand": peak_demand_charge(df)  + obs_manual_adjust,
+    "Demand TOU":  demand_tou_charge(df)   + obs_manual_adjust
 }
 
 summary = pd.DataFrame.from_dict(costs, orient='index', columns=['Monthly Cost ($)'])
