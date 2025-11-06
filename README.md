@@ -6,7 +6,7 @@ Thus, I created this repository to let me quickly direct to my used codes (Pytho
 
 Please note the codes in this repository are usually from others' work or in the public domain. Use caution if you'd like to refer to these.
 
-## Commonly-used `git` Commands (ASTR513一套小连招)
+## `git` Commands (ASTR513)
 Check and generate SSH key
 ```
 ls -al ~/.ssh
@@ -94,3 +94,29 @@ whisper your_video.mp4 --language Japanese --task transcribe
 Note: Whisper 使用的预训练模型由 OpenAI 提供，有多种尺寸（如 Tiny|39 MB、Base、Small、Medium、Large|1.51G），模型越大，精度越高，但占用的存储空间也更大。默认情况下，如果你没有指定模型，Whisper 会下载 Large 模型（1.51G），可以指定一个更小的模型来减少下载时间和存储占用。如果你需要释放空间，可以删除：`del C:\Users\14477\.cache\whisper\model-large.pt`
 
 
+## 本地监修 [jiyundi.github.io](https://jiyundi.github.io)
+### 1️⃣ 安装前提
+安装 Ruby（Windows: [RubyInstaller](https://rubyinstaller.org/downloads/), 约 1 GB）
+接着：
+```
+gem install bundler jekyll
+cd /D D:\_Archived\Websites\jiyundi.github.io
+```
+编辑你目录下的 Gemfile（如果没有，就在项目根目录创建一个），在开头加入以下两行：
+```
+gem "bigdecimal"
+gem "logger"
+```
+保存后运行：
+```
+bundle install
+gem install bigdecimal
+gem install logger
+```
+
+### 2️⃣ 启动cmd并运行：
+```
+cd /D D:\_Archived\Websites\jiyundi.github.io
+bundle exec jekyll serve
+```
+运行成功后，命令行会显示网站预览地址。
