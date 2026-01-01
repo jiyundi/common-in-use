@@ -1,14 +1,15 @@
 import matplotlib.pyplot as plt
-plt.style.use('classic')
-plt.rc('text.latex', preamble=r'\usepackage{amsmath}')
-# plt.rcParams.update({
-#         "font.family": "sans-serif",
-#         "font.sans-serif": "Helvetica",
-#         "font.serif": "Helvetica",
-#     })
-# matplotlib.rcParams['mathtext.fontset'] = 'custom'
-# matplotlib.rcParams['mathtext.rm'] = 'Helvetica'
-# matplotlib.rcParams['mathtext.it'] = 'Helvetica:italic'
+plt.style.use('default')
+plt.rcParams.update({
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica",
+    "font.serif": "Helvetica",
+})
+plt.rcParams['mathtext.fontset'] = 'custom'
+plt.rcParams['font.sans-serif'] = ['Helvetica']
+plt.rcParams['mathtext.it'] = 'Helvetica:italic'
+plt.rcParams['mathtext.bf'] = 'Helvetica:bold'
+# plt.rcParams['mathtext.rm'] = 'Helvetica' # 'cursive' not found
     
 fig = plt.figure(figsize=(7,9),dpi=100) # height=7
 plt.subplots_adjust(hspace=0.15, wspace=0.20) # h=height
