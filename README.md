@@ -53,6 +53,14 @@ git push origin main
 ## `Python` Read CSV tables
 Go to [`readcsv8.py`](./readcsv8.py). Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
 
+## See 1D `array` distribution histogram
+```
+import matplotlib.pyplot as plt
+ax = plt.subplot()
+ax.hist(array, bins=30)
+plt.show()
+```
+
 ## `Python` Plot
 Go to [`plot.py`](./plot.py)
 
