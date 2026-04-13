@@ -1,13 +1,19 @@
 # Quick Guide
 
-**Motivation:** I saved all of the codes that I ever used frequently for some time but later forgot. Once I needed to remind myself of these, I always wasted my time in googling and viewing online pages. 
+**Motivation:** I saved all of the codes that I used frequently for some time but later forgot. Once I needed to remind myself of these, I always wasted my time googling and viewing online pages. 
 
 Thus, I created this repository to let me quickly direct to my used codes (Python, Linux, IDL, etc.) and also hope to help other people viewing this now. 
 
-Please note the codes in this repository are usually from others' work or in the public domain. Use caution if you'd like to refer to these.
+Please note that the codes in this repository are usually from others' work or in the public domain. Use caution if you'd like to refer to these.
+
+## `rsync` Commands (Windows)
+Remove `--dry-run` if you are ready.
+```
+D:\cwrsync_6.4.7\bin\rsync.exe -av --delete --info=progress2 --dry-run /cygdrive/f/runs_nautilus/ /cygdrive/d/_RschArchives/RSCH3/kl_github/runs_nautilus/
+```
 
 ## `git` Commands (ASTR513)
-Check and generate SSH key
+Check and generate an SSH key
 ```
 ls -al ~/.ssh
 ssh-keygen -t ed25519 -C "jiyundi@gmail.com"
