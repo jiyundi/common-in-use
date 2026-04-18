@@ -6,6 +6,23 @@ Thus, I created this repository to let me quickly direct to my used codes (Pytho
 
 Please note that the codes in this repository are usually from others' work or in the public domain. Use caution if you'd like to refer to these.
 
+## `Python` plotting quick look
+```
+import matplotlib.pyplot as plt
+import numpy as np
+fig, ax = plt.subplots(figsize=(5,5))
+im = ax.imshow(data_info['spec'][2]['data'], aspect='auto', cmap='viridis',
+               )
+plt.colorbar(im, ax=ax)
+plt.show()
+```
+```
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(4,2))
+ax.hist(data[mask], bins=30)
+plt.show()
+```
+
 ## `rsync` Commands (Windows)
 Remove `--dry-run` if you are ready.
 ```
@@ -58,23 +75,6 @@ git push origin main
 
 ## `Python` Read CSV tables
 Go to [`readcsv8.py`](./readcsv8.py). Read 8-column csv and ignore the first 3 lines (`"infile"=open('filename')`).
-
-## `Python` plotting quick look
-```
-import matplotlib.pyplot as plt
-import numpy as np
-fig, ax = plt.subplots(figsize=(5,5))
-im = ax.imshow(data_info['spec'][2]['data'], aspect='auto', cmap='viridis',
-               )
-plt.colorbar(im, ax=ax)
-plt.show()
-```
-```
-import matplotlib.pyplot as plt
-ax = plt.subplot()
-ax.hist(array, bins=30)
-plt.show()
-```
 
 ## `Python` Plot
 Go to [`plot.py`](./plot.py)
