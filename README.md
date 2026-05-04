@@ -10,7 +10,7 @@ Please note that the codes in this repository are usually from others' work or i
 ```
 import matplotlib.pyplot as plt
 import numpy as np
-fig, ax = plt.subplots(figsize=(5,5))
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5,5))
 im = ax.imshow(data_info['spec'][2]['data'], aspect='auto', cmap='viridis',
                )
 plt.colorbar(im, ax=ax)
@@ -18,7 +18,7 @@ plt.show()
 ```
 ```
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots(figsize=(4,2))
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4,2))
 ax.hist(data[mask], bins=30)
 plt.show()
 ```
