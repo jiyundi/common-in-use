@@ -18,8 +18,8 @@ plt.show()
 ```
 ```
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4,2))
-ax.hist(data[mask], bins=30)
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(4,2)) # (width, height)
+ax[0].hist(data[mask], bins=30)
 plt.show()
 ```
 
@@ -58,10 +58,11 @@ git push origin main
 * `printf '%03d\n' 4`: print `004`
 * `for` loop:
   ```
-  for i in {0..4}; do printf '%0004d ' $i; done`: print `0000 0001 0002 0003
+  for i in {0..4}; do python main.py --slitID $i; done
   ```
 * `for` loop to rename files:
   ```
+  for i in {0..4}; do printf '%0004d ' $i; done`: print `0000 0001 0002 0003
   for i in {1..100}; do mv "$i.txt" "$(printf '%03d' $i).txt"; done
   ```
 
