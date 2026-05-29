@@ -19,6 +19,7 @@ plt.show()
 ```
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(4,2)) # (width, height)
+plt.subplots_adjust(hspace=0.3, wspace=0.6) # (height, width)
 ax[0].hist(data[mask], bins=30)
 plt.show()
 ```
