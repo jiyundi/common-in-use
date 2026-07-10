@@ -9,10 +9,8 @@ Please note that the codes in this repository are usually from others' work or i
 ## `Python` plotting quick look
 ```
 import matplotlib.pyplot as plt
-import numpy as np
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5,5))
-im = ax.imshow(data_info['spec'][2]['data'], aspect='auto', cmap='viridis',
-               )
+im = ax.imshow(data, aspect='auto', cmap='viridis')
 plt.colorbar(im, ax=ax)
 plt.show()
 ```
@@ -66,6 +64,12 @@ git push origin main
   for i in {0..4}; do printf '%0004d ' $i; done`: print `0000 0001 0002 0003
   for i in {1..100}; do mv "$i.txt" "$(printf '%03d' $i).txt"; done
   ```
+* 只想升级 Chrome
+  ```
+  sudo apt update
+  sudo apt install --only-upgrade google-chrome-stable
+  ```
+  这里只有 Chrome 会升级，不会升级别的软件。
 
 ## `Python` Format and Print
 | **Python 3**                 | Appearance                   |
