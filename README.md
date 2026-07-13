@@ -28,6 +28,16 @@ Remove `--dry-run` if you are ready.
 D:\cwrsync_6.4.7\bin\rsync.exe -av --delete --info=progress2 --dry-run /cygdrive/f/runs_nautilus/ /cygdrive/d/_RschArchives/RSCH3/kl_github/runs_nautilus/
 ```
 
+## Extract best-fit and corner plots from HPC
+1. **Best-fit plots**
+```
+for ($i=3; $i -le 141; $i++) { $s="{0:D3}" -f $i; cp ".\Slit_$s\best_fit_spec.png" "review_best-fit\Slit_${s}_best_fit_spec.png" -ErrorAction SilentlyContinue }
+```
+2. **Corner plots**
+```
+for ($i=3; $i -le 141; $i++) { $s="{0:D3}" -f $i; cp ".\Slit_$s\corner_all.png" "review_corner\Slit_${s}_corner.png" -ErrorAction SilentlyContinue }
+```
+
 ## `git` Commands (ASTR513)
 Check and generate an SSH key
 ```
