@@ -41,6 +41,10 @@ for ($i=3; $i -le 141; $i++) { $s="{0:D3}" -f $i; cp ".\Slit_$s\corner_all.png" 
 ```
 Get-ChildItem -Path "runs_20260710\Slit_*" -Directory | Where-Object { -not (Test-Path (Join-Path $_.FullName "post.txt")) } | ForEach-Object { $_.Name -replace '^Slit_', '' }
 ```
+4. **Delete specific files** (*Powershell*)
+```
+Get-ChildItem -Path "Slit_*\post.txt" -Directory | Remove-Item -Recurse -Force
+```
 
 ## `git` Commands (ASTR513)
 Check and generate an SSH key
