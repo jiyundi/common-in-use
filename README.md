@@ -149,12 +149,12 @@ Note: Whisper 使用的预训练模型由 OpenAI 提供，有多种尺寸（如 
 gem install bundler jekyll
 cd /D D:\_Archived\Websites\jiyundi.github.io
 ```
-编辑你目录下的 Gemfile（如果没有，就在项目根目录创建一个），在开头加入以下两行：
+在项目根目录下新建一个文本文件，命名为`Gemfile`（记得删掉`.txt`后缀），在开头加入以下两行：
 ```
 gem "bigdecimal"
 gem "logger"
 ```
-保存后运行：
+保存并关闭 Gemfile 文件运行：
 ```
 bundle install
 gem install bigdecimal
