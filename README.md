@@ -22,6 +22,22 @@ ax[0].hist(data[mask], bins=30)
 plt.show()
 ```
 
+## VS Code remote connection to Arizona HPC
+1. Go to UA [ServiceNow](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011701&sys_kb_id=a83f1b551b5dda103578773bdc4bcbea&spa=1)
+2. Installation Instructions > Instructions > Click the red `vpn.arizona.edu` > Log in and download. 
+3. Connect to UA HPC VPN by typing `vpn.hpc.arizona.edu` and authenticate.
+4. Use your local terminal (PowerShell), log on to `jiyundi@hpc.arizona.edu`, and authenticate.
+5. You should be on HPC Gatekeeper (netid@gatekeeper ~). Now type `shell` and continue.
+6. You should be on Puma or similar clusters (like `(puma) [netid@wentletrap ~] $`). Now apply for nodes and CPU sources with
+   ```
+   interactive -a my_supervisor_netid -n 4 -t 1:00:00
+   ```
+   where `my_supervisor_netid` should be replaced, `4` is the number of nodes applied for, and `1:00:00` is a 1-hour time slot for you.
+7. The wait time of the step above may be up to 60 - 120 seconds. Then the terminal will show
+   ```
+   
+   ```
+
 ## `rsync` Commands (Windows)
 Remove `--dry-run` if you are ready.
 ```
