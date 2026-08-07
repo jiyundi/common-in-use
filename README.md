@@ -23,6 +23,33 @@ plt.show()
 ```
 
 ## VS Code remote connection to Arizona HPC
+0. (One-time, optional) Generate SSH key on Windows:
+   ```
+   ssh-keygen -t rsa -b 4096
+   ```
+   and press `Enter` 3 times. Now upload the public keys to HPC
+   ```
+   scp C:\Users\14477\.ssh\id_rsa.pub jiyundi@filexfer.hpc.arizona.edu:~/id_rsa.pub
+   ```
+   and write in `authorized_keys`
+   ```
+   ssh jiyundi@filexfer.hpc.arizona.edu "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat ~/id_rsa.pub >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && rm ~/id_rsa.pub"
+   ```
+   The following doesn't guarantte a password-free remote connection in Step 9, but it's a worth to try -- Modify VS Code SSH Configuration file: (1) In VS Code, press Ctrl + Shift + P, choose "Remote-SSH: Open SSH Configuration File...", Open `C:\Users\14477\.ssh\config` and add the following
+   ```
+   # 1. Jumping board node (the node where you have previously configured the unencrypted key)
+   Host hpc-jump
+       HostName filexfer.hpc.arizona.edu
+       User jiyundi
+       IdentityFile C:\Users\14477\.ssh\id_rsa
+   
+   # 2. Dynamic calculation node template (connecting specific calculation nodes)
+   Host hpc-node
+       HostName r6u24n2.puma.hpc.arizona.edu
+       User jiyundi
+       IdentityFile C:\Users\14477\.ssh\id_rsa
+       ProxyJump hpc-jump
+   ```
 1. (One-time) Go to UA [ServiceNow](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011701&sys_kb_id=a83f1b551b5dda103578773bdc4bcbea&spa=1)
 2. (One-time) Installation Instructions > Instructions > Click the red `vpn.arizona.edu` > Log in and download. 
 3. Connect to UA HPC VPN by typing `vpn.hpc.arizona.edu` and authenticate.
