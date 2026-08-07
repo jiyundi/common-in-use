@@ -35,7 +35,7 @@ plt.show()
    ```
    ssh jiyundi@filexfer.hpc.arizona.edu "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat ~/id_rsa.pub >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && rm ~/id_rsa.pub"
    ```
-   The following doesn't guarantte a password-free remote connection in Step 9, but it's a worth to try -- Modify VS Code SSH Configuration file: (1) In VS Code, press Ctrl + Shift + P, choose "Remote-SSH: Open SSH Configuration File...", Open `C:\Users\14477\.ssh\config` and add the following
+   The following doesn't guarantte a password-free remote connection in Step 9, but it's a worth to try -- Modify VS Code SSH Configuration file: (1) In VS Code, (2) press Ctrl + Shift + P, (3) choose "Remote-SSH: Open SSH Configuration File...", (4) Open `C:\Users\14477\.ssh\config` and (5) add the following
    ```
    # 1. Jumping board node (the node where you have previously configured the unencrypted key)
    Host hpc-jump
