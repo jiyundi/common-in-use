@@ -23,8 +23,8 @@ plt.show()
 ```
 
 ## VS Code remote connection to Arizona HPC
-1. Go to UA [ServiceNow](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011701&sys_kb_id=a83f1b551b5dda103578773bdc4bcbea&spa=1)
-2. Installation Instructions > Instructions > Click the red `vpn.arizona.edu` > Log in and download. 
+1. (One-time) Go to UA [ServiceNow](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011701&sys_kb_id=a83f1b551b5dda103578773bdc4bcbea&spa=1)
+2. (One-time) Installation Instructions > Instructions > Click the red `vpn.arizona.edu` > Log in and download. 
 3. Connect to UA HPC VPN by typing `vpn.hpc.arizona.edu` and authenticate.
 4. Use your local terminal (PowerShell), log on to `jiyundi@hpc.arizona.edu`, and authenticate.
 5. You should be on HPC Gatekeeper (netid@gatekeeper ~). Now type `shell` and continue.
@@ -33,10 +33,17 @@ plt.show()
    interactive -a my_supervisor_netid -n 4 -t 1:00:00
    ```
    where `my_supervisor_netid` should be replaced, `4` is the number of nodes applied for, and `1:00:00` is a 1-hour time slot for you.
-7. The wait time of the step above may be up to 60 - 120 seconds. Then the terminal will show
+7. The wait time of the step above may be up to 60 - 120 seconds. Then the terminal will show your node name such as `r6u24n2`. For example
    ```
-   
+   [netid@r6u24n2 ~]$
    ```
+   Now you can type `hostname` to copy the output to your clipboard, making it easier to log in to VS Code.
+8. Open a remote connection in VS Code. (Installation of Remote SSH is required)
+9. Choose "+ Add New SSH Host" and then use what you copied in Step 7 to log in to your node 
+   ```
+   ssh jiyundi@r6u24n2.puma.hpc.arizona.edu
+   ```
+11. When you see "Open Folder" in the Explorer on the left of VS Code, that means you are all good to go!
 
 ## `rsync` Commands (Windows)
 Remove `--dry-run` if you are ready.
