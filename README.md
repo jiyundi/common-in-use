@@ -9,11 +9,11 @@ Please note that the codes in this repository are usually from others' work or i
 ## `Python` plotting quick look
 ```
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5,5))
-im = ax.imshow(data, aspect='auto', cmap='viridis')
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(5,5)) # (width, height)
+im = ax.imshow(data, aspect='auto', cmap='viridis', origin='lower')
 plt.colorbar(im, ax=ax)
 plt.tight_layout()
-plt.show()
+plt.savefig('test.jpg')
 ```
 ```
 import matplotlib.pyplot as plt
