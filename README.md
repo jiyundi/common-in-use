@@ -24,6 +24,12 @@ plt.tight_layout()
 plt.show()
 ```
 
+## HPC file transfer
+```
+rsync -av --dry-run --exclude='runs_*/' --exclude='Slit_*/' --exclude='.vscode/' --exclude='__pycache__/' ./ ../kl_mmt_transfer/
+```
+Remove `--dry-run` after confirming the outputs above.
+
 ## VS Code remote connection to Arizona HPC
 0. (One-time, optional) Generate SSH key on Windows:
    ```
