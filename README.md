@@ -112,14 +112,19 @@ ssh-keygen -t ed25519 -C "jiyundi@gmail.com"
 cat ~/.ssh/id_ed25519.pub (and copy to GitHub > Profile > Settings > SSH and GPG keys > New SSH key)
 ssh -T git@github.com
 ```
-Git pull & push
+Git pull
 ```
 git clone git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git
-git add .  # Prepare all changes
-git status # To see a quick summary of which files were modified or added
-git commit -m "Major updates"
-git pull git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git main
-git push origin main
+```
+Git push
+```
+git add .                               # Prepare all changes
+git status                              # Quick summary of files changed
+git commit -m "Major updates"           # Name this commit
+git pull git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git main # For collab repo
+git pull origin main                    # For personal
+git push --force-with-lease origin main # Recommended
+git push origin main                    # If the above failed
 ```
 
 ## Commonly-used `Linux` Commands
