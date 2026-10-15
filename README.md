@@ -115,7 +115,8 @@ ssh -T git@github.com
 Git pull & push
 ```
 git clone git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git
-git add .
+git add .  # Prepare all changes
+git status # To see a quick summary of which files were modified or added
 git commit -m "Major updates"
 git pull git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git main
 git push origin main
