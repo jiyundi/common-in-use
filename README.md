@@ -121,10 +121,18 @@ Git push
 git add .                               # Prepare all changes
 git status                              # Quick summary of files changed
 git commit -m "Major updates"           # Name this commit
-git pull git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git main # For collab repo
-git pull origin main                    # For personal
+git pull git@github.com:ua-2025q3-astr501-513/hw2-jiyundi.git main # Only for specifying other's repo
+git pull origin main --rebase           # Execute previous updates (if any) then update this commit
 git push --force-with-lease origin main # Recommended
 git push origin main                    # If the above failed
+```
+Withdraw commit
+```
+git reset --soft HEAD~1                 # Withdraw the latest commit
+git reset file_not_to_commit.data       # Only if you didn't "git push"
+git rm --cached file_not_to_commit.data # Most common: if you did "git push" and cancelled (Ctrl+Z)
+git status                              # Check if changed files are still there
+git add .                               # Update the commit
 ```
 
 ## Commonly-used `Linux` Commands
