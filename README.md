@@ -144,14 +144,17 @@ git add .                               # Update the commit
 * `ps`:  Process monitor
 * `ps`:  Process monitor in monitor
 * `echo`: Print. E.g., `echo "Today is $(date)"`
-* `printf '%03d\n' 4`: print `004`
 * `for` loop:
   ```
   for i in {0..4}; do python main.py --slitID $i; done
   ```
+* `printf '%03d\n' 4`: print `004\n`
 * `for` loop to rename files:
   ```
-  for i in {0..4}; do printf '%0004d ' $i; done`: print `0000 0001 0002 0003
+  for i in {0..4}; do printf '%04d ' "$i"; done
+  ```
+  The above will print `0000 0001 0002 0003 0004 `. For file names: 
+  ```
   for i in {1..100}; do mv "$i.txt" "$(printf '%03d' $i).txt"; done
   ```
 * 只想升级 Chrome
